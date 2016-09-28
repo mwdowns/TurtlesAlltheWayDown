@@ -19,7 +19,28 @@ bgcolor("black")
 # forward(300)
 # down()
 #
-star(20, "white", "yellow")
+
+
+def starSky():
+    ticks = 0
+    starColor = ["yellow", "red", "lightblue", "pink", "lightgreen", "white", "orange", "magenta"]
+    star(10, "black", "yellow")
+    while ticks < 20:
+        home()
+        down()
+        setheading(random.randrange(0, 360, 1))
+        up()
+        forward(random.randrange(10, 300, 1))
+        down()
+        ticks += 1
+        star((random.randrange(5, 30, 1)), "black", starColor[random.randrange(0, len(starColor), 1)])
+        up()
+    if ticks == 20:
+        home()
+        mainloop()
+
+starSky()
+
 #
 # up()
 # right(90)
@@ -50,5 +71,3 @@ star(20, "white", "yellow")
 # down()
 
 # circle(.5)
-
-mainloop()
