@@ -27,7 +27,6 @@ def starSky():
     star(10, "black", "yellow")
     while ticks < 20:
         home()
-        down()
         setheading(random.randrange(0, 360, 1))
         up()
         forward(random.randrange(10, 300, 1))
@@ -40,6 +39,7 @@ def starSky():
         mainloop()
 
 starSky()
+
 
 #
 # up()
